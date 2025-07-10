@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class TicketReply extends Model
 {
-    protected $guarded = ['id'];
+    protected $fillable = ['ticket_id', 'user_id', 'content'];
 
     public function user(): BelongsTo
     {
